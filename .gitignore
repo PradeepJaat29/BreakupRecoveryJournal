@@ -1,0 +1,10 @@
+*.class
+*.log
+*.db
+*.sqlite
+credentials.txt
+.DS_Store
+.idea/
+.vscode/
+__pycache__/
+
