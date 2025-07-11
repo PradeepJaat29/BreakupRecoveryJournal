@@ -5,6 +5,10 @@ import java.util.*;
 
 public class SupportLoader {
 	
+	//Base path to all asset files
+	private static final String ASSET_PATH = "src/assets/";
+	
+	
 	private static String getRandomLine(String filepath)
 	{
 		
@@ -45,10 +49,10 @@ public class SupportLoader {
 		}
 		
 		System.out.println("\n🧠 Quote of the Day: ");
-		System.out.println("👉 " + getRandomLine("assets/quotes.txt"));
+		System.out.println("👉 " + getRandomLine(ASSET_PATH + "quotes.txt"));
 		
 		System.out.println("\n💊 Healing Suggestion: ");
-		System.out.println("👉 "+ getRandomLine("assets/suggestions.txt"));
+		System.out.println("👉 "+ getRandomLine(ASSET_PATH + "suggestions.txt"));
 		
 		System.out.println("\n🎶 How are you feeling today?");
 		System.out.println("1. 🥲 Sad");
@@ -75,15 +79,15 @@ public class SupportLoader {
 		String moodFile = switch (mood)
 				{
 		
-		case 1 -> "assets/music_sad.txt";
-		case 2 -> "assets/music_angry.txt";
-		case 3 -> "assets/music_calm.txt";
-		case 4 -> "assets/music_motivated.txt";
-		case 5 -> "assets/music_nostalgic.txt";
-		default -> "assets/music_calm.txt";
+		case 1 -> ASSET_PATH + "music_sad.txt";
+		case 2 -> ASSET_PATH + "music_angry.txt";
+		case 3 -> ASSET_PATH + "music_calm.txt";
+		case 4 -> ASSET_PATH + "music_motivated.txt";
+		case 5 -> ASSET_PATH + "music_nostalgic.txt";
+		default -> ASSET_PATH + "music_calm.txt";
 				};
 				
-				System.out.println("\n🎧 Mood-Based Muisc Suggestion:");
+				System.out.println("\n🎧 Mood-Based Music Suggestion:");
 				System.out.println("🎵 " + getRandomLine(moodFile));
 	}
 
